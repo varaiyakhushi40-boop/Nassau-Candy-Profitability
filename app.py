@@ -315,10 +315,7 @@ if page == "📊 Product Profitability":
                       'Cash Trap': '#FAEEDA', 'Dead Weight': '#FCEBEB'}
         return f'background-color: {colors_map.get(val, "white")}'
     st.write(display_df.columns)
-   styled = display_df.style.map(color_status, subset=['Status'])\
-                          .map(color_quadrant, subset=['Quadrant'])
-    st.dataframe(styled, use_container_width=True, hide_index=True)
-
+  st.dataframe(display_df, use_container_width=True, hide_index=True)
 elif page == "🏭 Division & Region":
     
     col1, col2, col3 = st.columns(3)
