@@ -77,7 +77,7 @@ st.markdown("""
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Nassau_Candy_Distributor.csv")
+    df = pd.read_csv("Nassau Candy Distributor.csv")
     df['Gross_Margin_Pct'] = (df['Gross Profit'] / df['Sales'] * 100).round(2)
     df['Profit_Per_Unit'] = (df['Gross Profit'] / df['Units']).round(2)
     df['Cost_Ratio_Pct'] = (df['Cost'] / df['Sales'] * 100).round(2)
