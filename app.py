@@ -315,8 +315,8 @@ if page == "📊 Product Profitability":
                       'Cash Trap': '#FAEEDA', 'Dead Weight': '#FCEBEB'}
         return f'background-color: {colors_map.get(val, "white")}'
     st.write(display_df.columns)
-    styled = display_df.style.applymap(color_status, subset=['Status'])\
-                              .applymap(color_quadrant, subset=['Quadrant'])
+   styled = display_df.style.map(color_status, subset=['Status'])\
+                          .map(color_quadrant, subset=['Quadrant'])
     st.dataframe(styled, use_container_width=True, hide_index=True)
 
 elif page == "🏭 Division & Region":
